@@ -1,0 +1,4 @@
+<%= form_with model: @link do |f| %>
+    <%= f.text_field :url, value: @short_url %>
+    <%= f.submit "Shorten your URL", name:'submit'  %>
+<% end %>
