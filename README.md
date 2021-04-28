@@ -9,7 +9,7 @@
 
 ## Description
 
-A website shortening any url is developed in this project. If shortened url is opened in a browser, it is redirected to original url.
+A website shortening any url is developed in this project. If shortened url is opened in a browser, it is redirected to original url. Also, it is possible to check visiting times of each link.
 
 
 ## Built with
