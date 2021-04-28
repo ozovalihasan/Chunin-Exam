@@ -1,7 +1,11 @@
-<div data-controller="link">
-    <input  data-link-target="name" type="text" placeholder="url" >
-    <button data-action="click->link#shorten">
-        Shorten Link
-    </button>
-    <div data-link-target="output"></div>
+<div data-controller="link" class="d-flex center-element h-100 ">
+    <div>
+        <div class="d-flex center-element">
+            <input  data-link-target="name" type="text" placeholder="url" >
+            <button data-action="click->link#shorten">
+                Shorten Link
+            </button>
+        </div>
+        <div data-link-target="output" class="text-center"></div>
+    </div>
 </div>
