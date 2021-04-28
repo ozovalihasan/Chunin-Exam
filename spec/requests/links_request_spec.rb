@@ -5,14 +5,16 @@ RSpec.describe 'Links', type: :request do
     delete_all_tables
   end
 
-  it 'redirects to original url if short_url exists' do
+  it 'redirects to original url and save visiting time if short_url exists' do
     original_url = 'https://catdog.com/'
     link = Link.create(url: original_url)
+    expect(Visit.all.size).to eq(0)
 
     get "/#{link.short_url}"
 
     expect(response).to redirect_to(original_url)
     expect(status).to eq(302)
+    expect(Visit.all.size).to eq(1)
   end
 
   it 'redirects to root path if short_url doesn\'t exist' do

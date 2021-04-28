@@ -3,6 +3,8 @@ class Link < ApplicationRecord
   validates :url, presence: true
   validates :url, format: URI::DEFAULT_PARSER.make_regexp(%w[http https])
 
+  has_many :visits, dependent: :destroy
+
   private
 
   def set_short_url

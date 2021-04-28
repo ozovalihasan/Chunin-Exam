@@ -13,6 +13,7 @@ class LinksController < ApplicationController
   def show
     link = Link.find_by short_url: params[:short_url]
     if link
+      link.visits.create
       redirect_to link.url
     else
       redirect_to root_path
