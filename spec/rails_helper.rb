@@ -95,3 +95,5 @@ end
 def delete_all_tables
   Link.destroy_all
 end
+
+Capybara.default_driver = :headless_chrome
