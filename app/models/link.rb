@@ -1,6 +1,6 @@
 class Link < ApplicationRecord
   before_create :set_short_url
-  validates :url, uniqueness: { case_sensitive: false }, presence: true
+  validates :url, presence: true
   validates :url, format: URI::DEFAULT_PARSER.make_regexp(%w[http https])
 
   private
