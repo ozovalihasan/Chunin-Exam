@@ -1,100 +1,66 @@
-# Helpjuice Chunin Exam
+# Shorten Url 
 
-Welcome to the Helpjuice code challenge. This repository includes a new Rails app used for assessment and testing purposes only.
-
-## Context
-
-[Helpjuice](https://www.helpjuice.com/) provides a reasonable overview and description of who are we and what we do.
-
-Helpjuice empowers large and small companies (such as Amazon.com, Hertz, Virgin Mobile, Shipt.com, Philips, US Government, and thousands of others) to deliver instant support using our software.
-
-We're a smaller, yet growing software company, where everyone wears multiple hats. It's a team of excellent people, who are all willing to help each other because it's the way we work / our culture.
-
-We care about our customers and are a very transparent company in how we build software (e.g.: our product roadmap is public & customer-driven)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+![GitHub followers](https://img.shields.io/github/followers/ozovalihasan?label=ozovalihasan&style=social)
+![Twitter URL](https://img.shields.io/twitter/follow/ozovalihasan?label=Follow&style=social)
 
 
-## Getting Started
+![shorten](./app/assets/images/shorten.gif)
 
-```bash
-# Start your Rails server
-rails server
+## Description
 
-# In a separate tab
-bin/webpack-dev-server
-```
+A website shortening any url is developed in this project. If shortened url is opened in a browser, it is redirected to original url.
 
-## Tasks
 
-### 1. Build a URL shoretner app
+## Built with
 
-A URL shortener is an online application that converts a regular URL into its condensed format.
+- Ruby 2.6.5
+- Ruby on Rails v6.1.3.1
+- Stimulus
+- Capybara
+- Rspec
+- Git
 
-The user only has to copy the full URL of a website and paste it into the URL shortening tool to come up with an abbreviated version that is around 10 to 20 characters long.
 
-Example:
+## Setup
 
-Regular URL - http://www.nytimes.com/2012/08/09/us/more-casinos-and-internet-gambling-threaten-shakopee-tribe.html?_r=1&hp
+- Clone this repository
+- Open terminal
+- Change directory by using `cd Chunin-Exam/`
+- Run `bundle install`
+- Run `rails db:create`
+- Run `rails db:migrate`
+- Open rails server by using `rails s`
+- Open browser and go to http://localhost:3000
 
-Shortened URL - http://`your-domain`/P7eg6B
+## Test app
 
-Shortened URL then redirects to the original URL.
+- Follow steps given in Setup part
+- Install Chrome from [main page of Chrome](https://www.google.com/chrome/) or [terminal](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-ubuntu-18-04/)
+- Run `rails db:test:prepare` and `RAILS_ENV=test rails db:migrate` on your terminal
+- Run `rspec`
 
-**Plus points for challengers are able to track as much of analytics as possible!**
+## Authors
 
-### 2. Stimulus
+Reach out to me at one of the following places!
 
-Install and use stimulus to show off some of that JavaScript magic.
+👤 **Hasan Özovalı**
 
-Please try to put as much of your JavaScript into Stimulus controllers as possible!
+- Website: [ozovalihasan.com](https://www.ozovalihasan.com/)
+- LinkedIn: [Hasan Özovalı](https://www.linkedin.com/in/hasan-ozovali/)
+- Github: [@ozovalihasan](https://github.com/ozovalihasan)
+- Twitter: [@ozovalihasan](https://twitter.com/ozovalihasan)
+- Mail: [ozovalihasan@gmail.com](mailto:ozovalihasan@gmail.com)
+## Contributing 🤝
 
-### 3. Specs
+Contributions, issues, and feature requests are welcome!
 
-Install and configure RSpec and Capybara to test your coode.
+## Show your support
 
-**Plus points for challengers with best code coverage!**
+Give a ⭐️ if you like this project!
 
-### 4. Write documentation
+## License
 
-Rewrite this readme to describe your app and explain your approuch. Give as much info to the reviewers as possible!
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-## Tips
-
-- Submit your PR as you would in a professional environment
-- Keep your commit history and your diffs clean
-- Try to write clean code
-
-## How do I submit a Pull Request?
-
-Since this a public repository, submitting a Pull Request will not be the same as when you're a collaborator. The instructions below will help you push the changes to the repo.
-
-- Fork the project to your personal Github.
-- Clone the challenge to your local from your new forked repo in your personal git account.
-
-  ```
-    git clone <forked account>
-
-    example: git clone https://github.com/EmirVatric/Chunin-Exam
-  ```
-
-- Any changes made in the original repository should not be synced to your forked repository. The following commands enable us to track the original repository as a remote of the fork.
-
-   ```
-     git remote add --track master upstream https://github.com/EmirVatric/Chunin-Exam.git
-     git fetch upstream
-   ```
-
-- Create a new branch for your changes.
-
-   ```
-    git checkout -b <your-branch-name> upstream/master
-   ```
-
-- Make your changes, stage, and commit files necessary.
-- Push the changes to remote.
-
-  ```
-   git push -u origin <your-branch-name> origin
-  ```
-
-- You can now go to Github, and submit a PR with necessary details.
-- Happy Coding! Please don't hesitate to shoot an email to the recruitment team if you have any issues while pushing the code.
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
