@@ -1,12 +1,13 @@
 class LinksController < ApplicationController
-  def new
-    @short_url = params[:short_url]
-    @link = Link.new
-  end
+  def new; end
 
   def create
-    link = Link.create(link_params)
-    redirect_to root_path(short_url: link.short_url)
+    link = Link.create(url: request.raw_post)
+    if link.valid?
+      render plain: "#{request.base_url}/#{link.short_url}"
+    else
+      render plain: "The input is not a valid url. (Don't forget to add 'http' or 'htpps' at the beginning of your url)"
+    end
   end
 
   def show

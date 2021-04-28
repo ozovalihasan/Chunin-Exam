@@ -1,4 +1,7 @@
-<%= form_with model: @link do |f| %>
-    <%= f.text_field :url, value: @short_url %>
-    <%= f.submit "Shorten your URL", name:'submit'  %>
-<% end %>
+<div data-controller="link">
+    <input  data-link-target="name" type="text" >
+    <button data-action="click->link#shorten">
+        Shorten Link
+    </button>
+    <div data-link-target="output"></div>
+</div>
